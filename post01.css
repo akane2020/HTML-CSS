@@ -1,0 +1,77 @@
+@charset "UTF-8";
+
+/*基本設定*/
+* {
+    margin: 0;
+}
+
+/*タイトル*/
+h1 {
+    grid-column: 2 / span 3;
+    justify-self: center;
+    align-self: center;
+    color: #ffffff;
+    font-size: 56px;
+    font-weight: normal;
+    line-height: 1.2;
+    text-shadow: 0 0 5px #444444;
+    text-align: center; 
+}
+
+/*サブタイトル*/
+p {
+    grid-column: 5 / span 3;
+    align-self: center;
+    text-align: center;
+}
+
+/*ページ全体の設定*/
+body {
+    grid-template-columns: 0.2fr repeat(6,1fr) 0.2fr;
+    grid-template-rows: 
+               [head] 100px
+               [title sub] auto
+               [recent] auto
+               [foot] 100px;
+    grid-row-gap: 5%;
+    column-gap: 5%;
+}
+
+body > * {
+    grid-column: 2 / -2;
+}
+
+/*ヘッダーの設定*/
+header {
+    justify-self: start;
+    font-size: 40px;
+    color: powderblue;
+}
+
+/*画像の設定*/
+article img {
+    height: 300px;
+    width: auto;
+    align-items: center;
+}
+
+figcaption {
+    font-size: 12px;
+}
+
+/*フッターの設定*/
+footer {
+    grid-row: foot;
+    justify-self: center;
+    align-self: center;
+    font-size: 14px;
+}
+
+address {
+    font-size: 10px;
+}
+
+/*アイコンフォトの設定*/
+.fa-umbrella-beach {
+    color: #f88383;
+}

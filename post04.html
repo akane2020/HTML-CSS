@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>ハワイPRサイト</title>
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+    <header>Hawaii</header>
+
+    <article>
+
+        <h1>夜景スポット　タンタラスの丘</h1>
+        <figure>
+            <img src="img/view.jpg" alt="夜景の写真">
+        </figure>
+        <p>
+            ハワイの人気夜景スポットといえば「Sky Waikiki」です。<br>
+            19階からのオーシャンビューで、夕陽や夜景を見下ろしながらカクテルなどのおしゃれなお酒を飲むことができます。<br>
+            しかし、ハワイにはもっと素敵な夜景を見ることが出来る場所があります。
+            それは「タンタラスの丘(Tantalus)」です。<br>ここの山頂から見える夜景はハワイで一番綺麗です。
+            静かな中、周りに街灯がないので、ビルや街の灯りがより美しく見えます。<br>
+            カメラ好きにはたまらない撮影スポットなので、ぜひ一眼レフで素敵な夜景を映してみてください。
+        </p>
+        <div id="map"></div>
+        <script async defer
+          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDmFvceWVZIFPIme7rnn8LvxZCIbTA-ayM&callback=initMap"></script>
+        <script>
+          function initMap() {
+            var latlng = new google.maps.LatLng( 21.18504, 157.49226 );//中心の緯度, 経度
+            var map = new google.maps.Map(document.getElementById('map'), {
+              zoom: 14,//ズームの調整
+              center: latlng//上で設定した中心
+            });   
+          }
+        </script>
+    </article>
+
+　　<address>
+        WRITTEN BY あかね
+    </address>
+
+    <footer>©Hawaii trip site</footer>
+    
+    </body>
+</html>

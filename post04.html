@@ -28,11 +28,12 @@
           src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDmFvceWVZIFPIme7rnn8LvxZCIbTA-ayM&callback=initMap"></script>
         <script>
           function initMap() {
-            var latlng = new google.maps.LatLng( 21.18504, 157.49226 );//中心の緯度, 経度
-            var map = new google.maps.Map(document.getElementById('map'), {
-              zoom: 14,//ズームの調整
+            var latlng = new google.maps.LatLng(21.18504, 157.49226);//中心の緯度, 経度
+            var map = new google.maps.Map(document.getElementById('map'), Options);
+            var Options = {
+              zoom: 15,//ズームの調整
               center: latlng//上で設定した中心
-            });   
+            };   
           }
         </script>
     </article>
